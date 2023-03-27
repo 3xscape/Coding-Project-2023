@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    form {text-align: center;}
+    body {
+      background-color:gainsboro;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <form method="get" action="" class="ques">
+    <div id="question"></div>
+    <script>
+      let x = ~~(Math.random() * 113) + 13;
+      let y = ~~(Math.random() * 113) + 13;
+      let answerbox = x*y;
+      document.getElementById("question").innerHTML = x + " X " + y;
+    </script>
+    <br>  
+  </form>
+  <label for="Answerinput">Answer:</label><br> 
+  <input type="text" id="Answerinput" name="Answerinput"><br><br>
+    <div id="ans"></div> <br>
+  <button type="button" onclick="checkans()" class="but">Submit</button> 
+  <script>
+    function checkans() {
+      let Answerinput = document.getElementById('Answerinput').value; 
+      if(Answerinput == answerbox){
+        document.getElementById("ans").innerHTML = "Correct!";  
+      }
+      else{
+        document.getElementById("ans").innerHTML = "Try again";
+      }
+      }
+  </script> <br> <br>
+  <form>
+    <input type="submit" class="but" value="Reset">
+  </form>
+  <br><br>
+  <style> 
+    body {text-align: center;}
+  </style>
+</body>
+<br><br>
+<script>
+function changedif() {
+      let x = ~~(Math.random() * 120) + 13;
+      let y = ~~(Math.random() * 80) + 13;
+  document.getElementById("question").innerHTML = x + " / " + y;
+  answerbox = x/y;
+}
+</script>
+<button type="button" class="symbol" onclick="changedif()">Division</button>
+<br><br>
+<script>
+  function addition() {
+      let x = ~~(Math.random() * 113) + 13;
+      let y = ~~(Math.random() * 113) + 13;
+    document.getElementById("question").innerHTML = x + " + " + y;
+    answerbox = x+y;
+  }
+  </script>
+  <button type="button" class="symbol" onclick="addition()">Addition</button>
+  <div>
+    <br>
+<script>
+  function subtraction() {
+     let x = ~~(Math.random() * 113) + 13;
+      let y = ~~(Math.random() * 113) + 13;
+    document.getElementById("question").innerHTML = x + " - " + y;
+    answerbox = x-y;
+  }
+  </script>
+  <button type="button" class="symbol" onclick="subtraction()">Subtraction</button>
+</div>
+<body>
+  <div class="container">
+      <div class="calculator">
+          <form>
+              <div class="display">
+                  <input type="text" name="display">
+              </div>
+              <div>
+                  <input type="button" value="AC" onclick="display.value = '' " class="top">
+                  <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" class="top">
+                  <input type="button" value="(" onclick="display.value += '(' " class="top">
+                  <input type="button" value=")" onclick="display.value += ')' " class="top">
+                  <input type="button" value="/" onclick="display.value += '/' " class="top">
+              </div>
+              <div>
+                  <input type="button" value="7" onclick="display.value += '7' ">
+                  <input type="button" value="8" onclick="display.value += '8' ">
+                  <input type="button" value="9" onclick="display.value += '9' ">
+                  <input type="button" value="*" onclick="display.value += '*' " class="top">
+                  <input type="button" value="π" onclick="display.value += '3.14' " class="top">
+              </div>
+              <div>
+                  <input type="button" value="4" onclick="display.value += '4' ">
+                  <input type="button" value="5" onclick="display.value += '5' ">
+                  <input type="button" value="6" onclick="display.value += '6' ">
+                  <input type="button" value="-" onclick="display.value += '-' " class="top">
+                  <input type="button" value="&#8730" onclick="display.value = Math.sqrt(display.value)" class="top">
+              </div>
+              <div> 
+                  <input type="button" value="1" onclick="display.value += '1' ">
+                  <input type="button" value="2" onclick="display.value += '2' ">
+                  <input type="button" value="3" onclick="display.value += '3' ">
+                  <input type="button" value="+" onclick="display.value += '+' " class="top">
+                  <input type="button" value="^2" onclick="display.value = Math.pow(display.value, 2)" class="top">
+              </div>
+              <div>
+                  <input type="button" value="." onclick="display.value += '.' ">
+                  <input type="button" value="00" onclick="display.value += '00' ">
+                  <input type="button" value="0" onclick="display.value += '0' ">
+                  <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal top">
+              </div>
+          </form>
+      </div>
+  </div>
+</body> 
+</html>
