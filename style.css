@@ -125,8 +125,8 @@ form input.top{
     height: 60px; 
     text-align: center;
     color: #fff;
-    position:relative;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .but{
     background:#3a4452;
