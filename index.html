@@ -46,6 +46,16 @@
 </body>
 <br><br>
 <script>
+  function multi() {
+      let x = ~~(Math.random() * 113) + 13;
+      let y = ~~(Math.random() * 113) + 13;
+    document.getElementById("question").innerHTML = x + " X " + y;
+    answerbox = x*y;
+  }
+  </script>
+  <button type="button" class="symbol" onclick="multi()">Multiplication</button>
+  <br><br>
+<script>
 function changedif() {
       let x = ~~(Math.random() * 120) + 13;
       let y = ~~(Math.random() * 80) + 13;
