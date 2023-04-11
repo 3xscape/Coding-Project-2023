@@ -28,7 +28,7 @@
   <script>
     function checkans() {
       let Answerinput = document.getElementById('Answerinput').value; 
-      if(Answerinput == answerbox){
+      if(Math.abs(Answerinput - answerbox) < 0.01){
         document.getElementById("ans").innerHTML = "Correct!";  
       }
       else{
